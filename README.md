@@ -1,5 +1,5 @@
 # global
-Linux simple file installer
+Linux simple file installer in bash
 
 This tool will give you the option to move executables into your prefered directory in $PATH with ease. 
 It will also make it executable with chmod +x.
