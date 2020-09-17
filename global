@@ -14,7 +14,7 @@ printf "\e[39m\n"
 sudo printf "\e[92m[sudo enabled]\n"
 sudo chmod +x $1
 printf "\e[39m ----------------\n"
-sudo path_array=($PATH)
+path_array=($PATH)
 old_ifs=$IFS
 IFS=:
 sudo read -a path_array <<< "$PATH"
