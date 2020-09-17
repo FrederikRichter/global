@@ -12,12 +12,12 @@ printf "\n\e[92minstalling $1 for all users with all rights\n"
 printf "\e[35mPlease use sudo to run this script\n"
 printf "\e[39m\n"
 sudo printf "\e[92m[sudo enabled]\n"
-chmod +x $1
+sudo chmod +x $1
 printf "\e[39m ----------------\n"
-path_array=($PATH)
+sudo path_array=($PATH)
 old_ifs=$IFS
 IFS=:
-read -a path_array <<< "$PATH"
+sudo read -a path_array <<< "$PATH"
 position=0
 for i in "${path_array[@]}"; do
         printf "\e[39m$i \e[35m $position\n"
@@ -26,6 +26,6 @@ done
 IFS=$old_ifs
 printf "\n\e[35mPlease select a directory\n\e[39m"
 read directory
-mv $1 ${path_array[$directory]}
+sudo mv $1 ${path_array[$directory]}
 source ~/.bashrc
 printf "\e[92m\nmoved $1 to ${path_array[$directory]}\n"
